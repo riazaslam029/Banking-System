@@ -149,7 +149,7 @@ Contributions are welcome. To propose an improvement:
 
 ## License
 
-No license is currently specified for this repository. Contact the repository owner before using, modifying, or redistributing the code outside the repository.
+MIT License is attach
 
 ## Author
 
