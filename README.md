@@ -1,104 +1,157 @@
-# 🏦 Banking System (C++)
+# Banking System
 
-This is a **console-based Banking System** written in **C++**.  
-It allows creation of customer accounts, deposits, withdrawals, fund transfers, and transaction history management using arrays (without STL containers).
+A console-based banking management system written in **C++**. The application demonstrates object-oriented programming, account operations, transaction tracking, and menu-driven interaction using fixed-size arrays.
 
----
+> **Note:** This project is intended for educational and demonstration purposes. It does not provide the security, persistence, validation, or compliance controls required for production banking software.
 
-## 📌 Features
-- Create new customer accounts  
-- Deposit money into an account  
-- Withdraw money from an account  
-- Transfer funds between accounts  
-- Show **customer information**  
-- Show **transaction history** for each account  
-- Supports up to **50 customers** and **100 transactions per account**  
+## Features
 
----
+- Create customer accounts with a customer ID, name, account number, and initial deposit
+- Deposit funds into an existing account
+- Withdraw funds while checking for insufficient balance
+- Transfer funds between two accounts
+- Display customer and account information
+- Display account transaction history
+- Prevent duplicate account numbers
+- Record deposits, withdrawals, and incoming/outgoing transfers
+- Support up to **50 customers** and **100 transactions per account**
 
-## 🖥️ Example Run
+## Technology Stack
+
+- **Language:** C++
+- **Paradigm:** Object-oriented programming
+- **Storage:** In-memory fixed-size arrays
+- **Project format:** Microsoft Visual Studio solution and project files
+- **Standard library components:** `iostream` and `string`
+
+## Project Structure
+
+```text
+Banking-System/
+├── Banking System.sln
+├── Banking System/
+│   ├── Banking System.cpp
+│   ├── Banking System.vcxproj
+│   └── Banking System.vcxproj.filters
+├── .gitattributes
+├── .gitignore
+└── README.md
+```
+
+### Core Classes
+
+- `Transaction` — Stores the transaction type, amount, and additional details.
+- `Account` — Maintains the account number, balance, transaction history, and account operations.
+- `Customer` — Associates customer information with an account.
+
+## Requirements
+
+Choose one of the following environments:
+
+- **Visual Studio 2019 or later** with the C++ desktop development workload
+- A compatible C++ compiler such as `g++` or `clang++`
+
+## Getting Started
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/riazaslam029/Banking-System.git
+cd Banking-System
+```
+
+### Build with Visual Studio
+
+1. Open `Banking System.sln` in Visual Studio.
+2. Select a build configuration such as `Debug` or `Release`.
+3. Select the appropriate platform, such as `x64` or `Win32`.
+4. Build the solution.
+5. Run the application from Visual Studio or the generated executable.
+
+### Build with g++
+
+From the repository root, run:
+
+```bash
+g++ "Banking System/Banking System.cpp" -std=c++17 -Wall -Wextra -o banking-system
+```
+
+Run the program on Linux or macOS:
+
+```bash
+./banking-system
+```
+
+Run the program on Windows PowerShell:
+
+```powershell
+./banking-system.exe
+```
+
+## Usage
+
+After launching the program, use the numbered menu to select an operation:
+
+```text
 ===== Banking System Menu =====
+1. Create Customer
+2. Deposit
+3. Withdraw
+4. Fund Transfer
+5. Show Customer Info
+6. Show Transactions
+7. Exit
+```
 
-Create Customer
+A typical workflow is:
 
-Deposit
+1. Create a customer account.
+2. Use the account number to deposit funds.
+3. Withdraw funds or transfer money to another account.
+4. Review customer details and transaction history.
+5. Exit the application.
 
-Withdraw
+## Data and Validation Notes
 
-Fund Transfer
+- All data is stored in memory and is lost when the application exits.
+- The current implementation uses fixed-size arrays rather than dynamic containers.
+- The application checks for duplicate account numbers and insufficient funds.
+- Account numbers must exist before deposits, withdrawals, transfers, or lookups can be performed.
+- Input validation for malformed or negative values is limited and can be improved.
 
-Show Customer Info
+## Potential Improvements
 
-Show Transactions
+- Add persistent storage using files or a database
+- Replace fixed-size arrays with STL containers such as `std::vector`
+- Add stronger validation for account numbers, amounts, and menu input
+- Prevent negative initial deposits and transaction amounts
+- Add authentication and role-based access
+- Add account closing and customer update functionality
+- Add timestamps and unique transaction IDs
+- Separate business logic, user interface, and data access into dedicated modules
+- Add automated tests and a build system such as CMake
+- Add interest calculation, loan management, and reporting features
 
-Exit
-Enter your choice: 1
-Enter Customer ID: 101
-Enter Name: Alice Johnson
-Enter Account Number: 1001
-Enter Initial Deposit: 5000
-✅ Customer account created successfully!
+## Contributing
 
-===== Banking System Menu =====
+Contributions are welcome. To propose an improvement:
 
-Create Customer
+1. Fork the repository.
+2. Create a feature branch:
 
-Deposit
-
-Withdraw
-
-Fund Transfer
-
-Show Customer Info
-
-Show Transactions
-
-Exit
-Enter your choice: 2
-Enter Account Number: 1001
-Enter Deposit Amount: 2000
-✅ Deposit successful! New Balance: 7000
-
-yaml
-Copy code
-
----
-
-## 🚀 How to Run
-1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/banking-system-cpp.git
-Navigate into the project folder:
+   git checkout -b feature/your-improvement
+   ```
 
-bash
-Copy code
-cd banking-system-cpp
-Compile the program:
+3. Make your changes and test them locally.
+4. Commit your changes with a clear message.
+5. Push the branch and open a pull request.
 
-bash
-Copy code
-g++ banking.cpp -o banking
-Run the program:
+## License
 
-bash
-Copy code
-./banking
-📂 Files
-banking.cpp → Main C++ source code
+No license is currently specified for this repository. Contact the repository owner before using, modifying, or redistributing the code outside the repository.
 
-README.md → Documentation
+## Author
 
-⚡ Requirements
-C++ compiler (e.g., g++, clang++, or MSVC)
-
-🔮 Future Improvements
-Replace fixed arrays with STL vectors for flexibility
-
-Add file storage for persistent data (accounts & transactions)
-
-Implement password-protected logins for customers
-
-Add interest calculation and loan management
-
-📜 License
-This project is open-source and available under the MIT License.
+**Riaz Aslam**  
+GitHub: [@riazaslam029](https://github.com/riazaslam029)
